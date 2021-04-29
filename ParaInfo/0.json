@@ -1,1 +1,30 @@
-[{"Name":"Boy_Throw","Location":[0, 3, 0],"Rotation":[1.5707964897155762, -0.0, 0.4363323152065277]},{"Name":"Ball_Throw","Location":[0, 0, 0],"Rotation":[0, 0, 0]}]
+[
+    {
+        "Name": "Man_Catch",
+        "Location": [
+            0,
+            3,
+            0
+        ],
+        "Rotation": [
+            1.5707964897155762,
+            -0.0,
+            0.4363323152065277
+        ],
+        "Scale": -1
+    },
+    {
+        "Name": "Ball_Catch",
+        "Location": [
+            0,
+            0,
+            0
+        ],
+        "Rotation": [
+            0,
+            0,
+            0
+        ],
+        "Scale": -1
+    }
+]
