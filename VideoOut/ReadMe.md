@@ -1,0 +1,1 @@
+This folder contains the animated frames after rendering.
