@@ -9,20 +9,19 @@ def develope(chat_id,text):
     #### code to automate rendering
     send_message(chat_id,"Your Video is queued for manual rendering...........\n(Automatic rendering is not available.)")
     x = input("Please Render manually!")
+    if x == "q":
+        return False
     #### code to automate rendering
 
-    send_message(chat_id,"Rendering completed.\n Your video is generating.....")
-    os.system("python PostProcesing.py")
+    send_message(chat_id,"Rendering completed.\n Audio files are generating.....")
     #### code to generate voice
+    send_message(chat_id,"Audio generation completed.\n Your video is generating.....")
+        #### Output audio file to be stored in directory Audio
     #### code to generate voice
+    os.system('python PostProcesing.py "' + text + '"')
+    send_message(chat_id,"You will recive the video shortly...")
 
-    #### code to merge sound and video
-    #### code to merge sound and video
-
-    if "Out.mp4" in os.listdir("Final/"):
-        return True
-    else:
-        return False
+    return "Out.mp4" in os.listdir("Final/")
 
 def send_message(chat_id,message):
     Baseurl = "https://api.telegram.org/bot1628016853:AAEyFvb-PmsbUEp4kcAveWtPiFjn_I6wvKE/sendMessage"

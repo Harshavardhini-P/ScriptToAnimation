@@ -32,6 +32,7 @@ def FinalizeOP(op):
     table = table.append(row,ignore_index=True)
     x = [table.to_string().split("\n")[i].split()[1:] for i in range(1,len(table)+1)]
     Data = np.array(tokenizer.texts_to_sequences(x))
+    print(Data)
     NewY = Model.predict(Data)
     names = tokenizer.sequences_to_texts(NewY)[0].split()
 
@@ -89,8 +90,8 @@ if __name__ == "__main__":
     print("\nClearing Destination Folder .....")
     CleanDestinFolder(destinFolder)
     CleanDestinFolder("BasicInfo/")
-    Paragraph = input("Enter the script in 'Simple Sentence' here -- > ")
-    #Paragraph = sys.argv[1]
+    #Paragraph = input("Enter the script in 'Simple Sentence' here -- > ")
+    Paragraph = sys.argv[1]
     Lines = [x.strip().capitalize() for x in Paragraph.split(".") if len(x) != 0]
 
     for i in range(len(Lines)):

@@ -1,5 +1,6 @@
 from modules import Response as R
 from telegram.ext import*
+import os
 
 Api_key = "1628016853:AAEyFvb-PmsbUEp4kcAveWtPiFjn_I6wvKE"
 
@@ -12,8 +13,9 @@ def help_command(update, context):
 
 def handle_message(update, context):
     name = update.message.from_user.first_name
-    if name == "Deepak Kumar":
+    if name in ["Deepak Kumar","Harish"]:
         text = str(update.message.text).lower()
+        print("\nReceived Script: " + text + "\n")
         status = R.develope(update.message.chat.id,text)
         if status:
             sentStatus = R.send_file(update.message.chat.id)
@@ -27,7 +29,8 @@ def error(update, context):
     print(f"Update {update} caused error {context.error}")
 
 
-print("Bot is Active now!!!")
+os.system("cls")
+print("Anime Maker is online now.\n")
 updater = Updater(Api_key, use_context=True)
 dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler("start",start_command))

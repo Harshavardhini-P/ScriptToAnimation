@@ -1,9 +1,9 @@
 {
     "Action": {
-        "Name": "caught"
+        "Name": "throws"
     },
     "Subject": {
-        "Name": "keeper"
+        "Name": "Fred"
     },
     "Object": {
         "Name": "ball"

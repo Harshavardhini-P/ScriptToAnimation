@@ -1,6 +1,6 @@
 [
     {
-        "Name": "Man_Catch",
+        "Name": "Boy_Throw",
         "Location": [
             0,
             3,
@@ -14,7 +14,7 @@
         "Scale": -1
     },
     {
-        "Name": "Ball_Catch",
+        "Name": "Ball_Throw",
         "Location": [
             0,
             0,
